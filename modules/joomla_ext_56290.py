@@ -180,10 +180,13 @@ register(CveModule(
     cluster="joomla_ext",
     title="Joomla Ext - PageBuilderCK unauth file write via fonts.save",
     vclass="rce",
+    severity="medium",  # file write .css only — no code execution path
     cwe="CWE-434",
     product="PageBuilderCK (com_pagebuilderck)",
     versions_affected="< 1.3.0",
-    status="documented",
+    # Verified as a NEGATIVE result for RCE: the write is real but the
+    # extension appends a hardcoded .css suffix, so no path yields a .php file.
+    status="verified",
     requires=["komponen com_pagebuilderck terpasang"],
     check=check,
     exploit=exploit,

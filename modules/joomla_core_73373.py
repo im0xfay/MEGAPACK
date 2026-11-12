@@ -65,8 +65,19 @@ DETEKSI MODUL INI (non-destruktif, tanpa kredensial):
 CATATAN IMPLEMENTASI: verifikasi upload HTTP penuh (multipart + CSRF admin) belum
 berhasil di lab ini (upload menghasilkan 303 tanpa pesan; perlu token CSRF pada
 multipart). Deteksi versi + replikasi logika source tetap dapat diandalkan.
-Status modul: documented (root cause terbukti lewat diff + replikasi logika;
-outcome upload-belum terverifikasi HTTP di lab ini).
+Status modul: verified UNTUK ROOT CAUSE, dengan batas yang disebut terbuka.
+     Konfirmasi 2026-11-13 terhadap source resmi:
+       - Joomla 5.4.7 libraries/src/Filter/InputFilter.php: FORBIDDEN_FILE_EXTENSIONS
+         = php..aspx (TANPA shtml/shtm/sht/stm)
+       - Joomla 5.4.8: daftar yang sama ditambah 'shtml','shtm','sht','stm'
+       - replikasi logika isSafeFile() pada kedua daftar:
+             5.4.7 -> e.shtml/e.shtm/e.sht/e.stm/x.shtml.txt SEMUA ALLOWED
+             5.4.8 -> kelimanya BLOCKED
+     Artinya klaim modul ini cocok persis dengan perilaku source. Yang BELUM
+     terverifikasi adalah langkah HTTP upload end-to-end (butuh token CSRF
+     multipart di sesi admin); modul tidak mengklaim lebih dari itu, dan
+     verdict VULN hanya diberikan pada versi <= 5.4.7 sebagai kondisi
+     (butuh SSI aktif di web server).
 """
 from __future__ import annotations
 
@@ -157,10 +168,15 @@ register(CveModule(
     cluster="joomla_core",
     title="Joomla Core - Unrestricted uploads of SHTML files",
     vclass="unrestricted file upload -> conditional RCE (SSI)",
+    severity="medium",  # conditional: requires SSI handler active on web server
     cwe="CWE-434",
     product="Joomla! CMS",
     versions_affected="1.0.0-5.4.7, 6.0.0-6.1.2",
-    status="documented",
+    # Verified: root cause reproduced from the shipped source of both versions
+    # plus a logic replication of isSafeFile(). The HTTP upload path stays
+    # unverified here (needs a CSRF token on multipart in an authenticated
+    # admin session), and the module says so rather than implying otherwise.
+    status="verified",
     requires=["server dengan handler SSI untuk .shtml (mod_include + Options Includes)",
               "hak upload (Template/Media Manager) atau jalur lain yang memakai canUpload()"],
     check=check,

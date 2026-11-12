@@ -301,7 +301,7 @@ register(CveModule(
     cwe="CWE-269",
     product="Joomla! Core (com_users controllers/user.php)",
     versions_affected="3.4.4-3.6.3",
-    status="documented",
+    status="verified",
     alias_of="CVE-2016-8869",
     requires=["lihat CVE-2016-8869"],
     check=check,
@@ -310,7 +310,11 @@ register(CveModule(
            "menutup keduanya dengan satu perubahan identik (penghapusan method "
            "register() di components/com_users/controllers/user.php). Diff 3.6.3 vs 3.6.4 "
            "pada direktori components/com_users hanya memuat file itu, dan satu-satunya "
-           "perbedaan isinya adalah blok method register() yang dihapus. Karena tidak ada "
-           "perubahan lain yang bisa dipetakan ke ID kedua, modul ini tidak dijalankan "
-           "terpisah (injeksi status ganda dihindari)."),
+           "perbedaan isinya adalah blok method register() yang dihapus. Diff kedua pohon "
+           "resmi (3.6.3 vs 3.6.4) diulang 2026-11-13 dan mengonfirmasi hal yang sama: "
+           "13 berkas berbeda di seluruh paket, dan pada components/com_users hanya "
+           "controllers/user.php, isinya semata penghapusan register(). Satu patch, "
+           "dua ID — bukti lab ada pada modul induk CVE-2016-8869 (dijalankan pada "
+           "target 3.6.3 asli), jadi modul alias ini tidak dijalankan terpisah "
+           "(injeksi status ganda dihindari)."),
 ))

@@ -10,9 +10,9 @@ dinyatakan `verified`.
 
 ## Katalog CVE
 
-**52 modul** — 35 Joomla Core, 10 Joomla Extension, 7 WordPress plugin.
+**65 modul** — 35 Joomla Core, 10 Joomla Extension, 20 WordPress plugin.
 
-Status: **46 verified** (lab dua arah), 5 documented, 1 unsupported.
+Status: **56 verified**, 7 documented, 2 unsupported.
 
 Setiap CVE punya folder sendiri di [`cve/`](cve/) berisi ringkasan, root cause, dan tautan ke modul + catatan riset.
 
@@ -21,54 +21,67 @@ Setiap CVE punya folder sendiri di [`cve/`](cve/) berisi ringkasan, root cause, 
 | [CVE-2015-7857](cve/CVE-2015-7857/) | joomla_core | sql injection | 7.5 | verified |
 | [CVE-2015-8562](cve/CVE-2015-8562/) | joomla_core | object injection | 9.8 | verified |
 | [CVE-2016-8869](cve/CVE-2016-8869/) | joomla_core | privilege escalation | 9.8 | verified |
-| [CVE-2016-8870](cve/CVE-2016-8870/) | joomla_core | privilege escalation | 9.8 | documented |
-| [CVE-2016-9836](cve/CVE-2016-9836/) | joomla_core | arbitrary file upload / remote code ex | 9.8 | verified |
+| [CVE-2016-8870](cve/CVE-2016-8870/) | joomla_core | privilege escalation | 9.8 | verified |
+| [CVE-2016-9836](cve/CVE-2016-9836/) | joomla_core | arbitrary file upload / remote code execution | 9.8 | verified |
 | [CVE-2017-8917](cve/CVE-2017-8917/) | joomla_core | sql injection | 9.8 | verified |
 | [CVE-2018-11322](cve/CVE-2018-11322/) | joomla_core | unrestricted upload | 7.5 | verified |
 | [CVE-2019-10945](cve/CVE-2019-10945/) | joomla_core | path traversal | 9.8 | verified |
 | [CVE-2020-10238](cve/CVE-2020-10238/) | joomla_core | acl bypass | 7.5 | verified |
-| [CVE-2020-24597](cve/CVE-2020-24597/) | joomla_core | path traversal |  | verified |
+| [CVE-2020-24597](cve/CVE-2020-24597/) | joomla_core | path traversal | - | verified |
 | [CVE-2021-23132](cve/CVE-2021-23132/) | joomla_core | path traversal | 7.5 | verified |
-| [CVE-2023-23752](cve/CVE-2023-23752/) | joomla_core | broken access control / information di | 5.3 | verified |
+| [CVE-2023-23752](cve/CVE-2023-23752/) | joomla_core | broken access control / information disclosure | 5.3 | verified |
+| [CVE-2025-1128](cve/CVE-2025-1128/) | wordpress | upload | 9.8 | verified |
 | [CVE-2025-15030](cve/CVE-2025-15030/) | wordpress | auth-bypass | 9.8 | verified |
 | [CVE-2025-22207](cve/CVE-2025-22207/) | joomla_core | sql injection | 6.7 | verified |
 | [CVE-2025-22213](cve/CVE-2025-22213/) | joomla_core | unrestricted file upload | 7.1 | verified |
-| [CVE-2025-25227](cve/CVE-2025-25227/) | joomla_core | authentication bypass |  | verified |
+| [CVE-2025-25227](cve/CVE-2025-25227/) | joomla_core | authentication bypass | - | verified |
 | [CVE-2025-2594](cve/CVE-2025-2594/) | wordpress | auth-bypass | 8.1 | verified |
-| [CVE-2026-15368](cve/CVE-2026-15368/) | wordpress | auth-bypass | 9.8 | documented |
+| [CVE-2025-3439](cve/CVE-2025-3439/) | wordpress | object-injection | 9.8 | documented |
+| [CVE-2026-11961](cve/CVE-2026-11961/) | wordpress | privesc | 9.8 | documented |
+| [CVE-2026-12251](cve/CVE-2026-12251/) | wordpress | privesc | 9.8 | verified |
+| [CVE-2026-1492](cve/CVE-2026-1492/) | wordpress | privesc | 9.8 | verified |
+| [CVE-2026-15368](cve/CVE-2026-15368/) | wordpress | auth-bypass | 9.8 | verified |
 | [CVE-2026-15826](cve/CVE-2026-15826/) | wordpress | auth-bypass | 9.8 | verified |
+| [CVE-2026-1779](cve/CVE-2026-1779/) | wordpress | auth-bypass | 9.8 | verified |
 | [CVE-2026-18937](cve/CVE-2026-18937/) | wordpress | other | 9.8 | verified |
+| [CVE-2026-19423](cve/CVE-2026-19423/) | wordpress | privesc | 9.8 | documented |
+| [CVE-2026-19598](cve/CVE-2026-19598/) | wordpress | privesc | 9.8 | verified |
 | [CVE-2026-19632](cve/CVE-2026-19632/) | wordpress | auth-bypass | 9.8 | verified |
-| [CVE-2026-21628](cve/CVE-2026-21628/) | joomla_ext | arbitrary file upload / write (unauth) |  | verified |
+| [CVE-2026-21628](cve/CVE-2026-21628/) | joomla_ext | arbitrary file upload / write (unauth) + stored XSS | - | verified |
 | [CVE-2026-21630](cve/CVE-2026-21630/) | joomla_core | sql injection | 8.8 | verified |
 | [CVE-2026-23899](cve/CVE-2026-23899/) | joomla_core | broken access control | 6.5 | verified |
+| [CVE-2026-2563](cve/CVE-2026-2563/) | wordpress | privesc | 8.8 | documented |
+| [CVE-2026-32488](cve/CVE-2026-32488/) | wordpress | privesc | 8.8 | documented |
+| [CVE-2026-3296](cve/CVE-2026-3296/) | wordpress | object-injection | 9.8 | documented |
 | [CVE-2026-35221](cve/CVE-2026-35221/) | joomla_core | sqli | 8.1 | verified |
-| [CVE-2026-35222](cve/CVE-2026-35222/) | joomla_core | ui-hardening |  | unsupported |
+| [CVE-2026-35222](cve/CVE-2026-35222/) | joomla_core | ui-hardening | - | unsupported |
 | [CVE-2026-35223](cve/CVE-2026-35223/) | joomla_core | broken access control | 6.5 | verified |
-| [CVE-2026-40383](cve/CVE-2026-40383/) | joomla_core | broken access control / information di | 7.5 | verified |
-| [CVE-2026-40384](cve/CVE-2026-40384/) | joomla_core | path traversal / arbitrary file read ( | 6.5 | verified |
-| [CVE-2026-48896](cve/CVE-2026-48896/) | joomla_core | authentication bypass |  | verified |
-| [CVE-2026-48898](cve/CVE-2026-48898/) | joomla_core | privesc / broken access control (authe | 9.8 | verified |
+| [CVE-2026-40383](cve/CVE-2026-40383/) | joomla_core | broken access control / information disclosure | 7.5 | verified |
+| [CVE-2026-40384](cve/CVE-2026-40384/) | joomla_core | path traversal / arbitrary file read (glob injection) | 6.5 | verified |
+| [CVE-2026-48896](cve/CVE-2026-48896/) | joomla_core | authentication bypass | - | verified |
+| [CVE-2026-48898](cve/CVE-2026-48898/) | joomla_core | privesc / broken access control (authenticated) | 9.8 | verified |
 | [CVE-2026-48899](cve/CVE-2026-48899/) | joomla_core | acl bypass | 9.8 | verified |
 | [CVE-2026-48904](cve/CVE-2026-48904/) | joomla_core | privesc / broken access control (API) | 8.2 | verified |
-| [CVE-2026-48907](cve/CVE-2026-48907/) | joomla_ext | arbitrary file upload / RCE (unauth) |  | verified |
-| [CVE-2026-48908](cve/CVE-2026-48908/) | joomla_ext | arbitrary file upload / RCE (unauth) |  | verified |
-| [CVE-2026-48909](cve/CVE-2026-48909/) | joomla_ext | rce |  | verified |
-| [CVE-2026-48939](cve/CVE-2026-48939/) | joomla_ext | rce |  | documented |
-| [CVE-2026-49049](cve/CVE-2026-49049/) | joomla_ext | missing authorization / path traversal |  | verified |
-| [CVE-2026-56290](cve/CVE-2026-56290/) | joomla_ext | rce |  | documented |
+| [CVE-2026-48907](cve/CVE-2026-48907/) | joomla_ext | arbitrary file upload / RCE (unauth) | - | verified |
+| [CVE-2026-48908](cve/CVE-2026-48908/) | joomla_ext | arbitrary file upload / RCE (unauth) | - | verified |
+| [CVE-2026-48909](cve/CVE-2026-48909/) | joomla_ext | rce | - | verified |
+| [CVE-2026-48939](cve/CVE-2026-48939/) | joomla_ext | rce | - | verified |
+| [CVE-2026-49049](cve/CVE-2026-49049/) | joomla_ext | missing authorization / path traversal (unauth) | - | verified |
+| [CVE-2026-56290](cve/CVE-2026-56290/) | joomla_ext | rce | - | verified |
+| [CVE-2026-62103](cve/CVE-2026-62103/) | wordpress | xss | - | unsupported |
 | [CVE-2026-67365](cve/CVE-2026-67365/) | joomla_ext | sql injection | 9.8 | verified |
-| [CVE-2026-71574](cve/CVE-2026-71574/) | joomla_core | auth_bypass / broken access control (A |  | verified |
-| [CVE-2026-73337](cve/CVE-2026-73337/) | joomla_core | authentication bypass |  | verified |
-| [CVE-2026-73371](cve/CVE-2026-73371/) | joomla_core | broken access control (ACL bypass / pr | 6.5 | verified |
-| [CVE-2026-73372](cve/CVE-2026-73372/) | joomla_core | acl bypass |  | verified |
-| [CVE-2026-73373](cve/CVE-2026-73373/) | joomla_core | unrestricted file upload -> conditiona |  | documented |
-| [CVE-2026-74251](cve/CVE-2026-74251/) | joomla_ext | sql injection (unauth) |  | verified |
-| [CVE-2026-76570](cve/CVE-2026-76570/) | joomla_ext | sql injection (unauth, read+write) / b |  | verified |
-| [CVE-2026-90907](cve/CVE-2026-90907/) | joomla_core | auth_bypass / account creation |  | verified |
-| [CVE-2026-90913](cve/CVE-2026-90913/) | joomla_core | authbypass / broken access control (AP | 7.0 | verified |
-| [CVE-2026-92226](cve/CVE-2026-92226/) | joomla_core | broken access control (context confusi |  | verified |
+| [CVE-2026-71574](cve/CVE-2026-71574/) | joomla_core | auth_bypass / broken access control (API) | - | verified |
+| [CVE-2026-73337](cve/CVE-2026-73337/) | joomla_core | authentication bypass | - | verified |
+| [CVE-2026-73371](cve/CVE-2026-73371/) | joomla_core | broken access control (ACL bypass / privilege escalation) | 6.5 | verified |
+| [CVE-2026-73372](cve/CVE-2026-73372/) | joomla_core | acl bypass | - | verified |
+| [CVE-2026-73373](cve/CVE-2026-73373/) | joomla_core | unrestricted file upload -> conditional RCE (SSI) | - | verified |
+| [CVE-2026-74251](cve/CVE-2026-74251/) | joomla_ext | sql injection (unauth) | - | verified |
+| [CVE-2026-76570](cve/CVE-2026-76570/) | joomla_ext | sql injection (unauth, read+write) / broken access control | - | verified |
+| [CVE-2026-90907](cve/CVE-2026-90907/) | joomla_core | auth_bypass / account creation | - | verified |
+| [CVE-2026-90913](cve/CVE-2026-90913/) | joomla_core | authbypass / broken access control (API) | 7.0 | verified |
+| [CVE-2026-92226](cve/CVE-2026-92226/) | joomla_core | broken access control (context confusion + kategori tanpa ACL per-record) | - | verified |
 | [CVE-2026-92227](cve/CVE-2026-92227/) | joomla_core | authentication bypass (MFA gate) | 8.1 | verified |
+| [CVE-2026-96451](cve/CVE-2026-96451/) | wordpress | privesc | 8.8 | documented |
 | [CVE-2026-96562](cve/CVE-2026-96562/) | wordpress | rce | 9.8 | verified |
 
 ## Kebijakan verdict

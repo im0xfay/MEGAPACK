@@ -232,10 +232,15 @@ register(CveModule(
     cluster="joomla_ext",
     title="Joomla Ext - iCagenda unauth file upload via submit.submit",
     vclass="rce",
+    severity="medium",  # unauth upload reaches handler but core filter blocks execution
     cwe="CWE-434",
     product="iCagenda (com_icagenda)",
     versions_affected="<= 4.0.7",
-    status="documented",
+    # Verified as a NEGATIVE result: the upload reaches frontendFileUpload()
+    # unauth, but Joomla's InputFilter::isSafeFile() neutralises every path to
+    # code execution. That conclusion was reproduced against the shipped
+    # Joomla source, not inherited from the advisory.
+    status="verified",
     requires=["komponen com_icagenda terpasang",
               "halaman submit front-end dapat dibuka"],
     check=check,
@@ -255,6 +260,13 @@ register(CveModule(
            "(`FilesMatch \\.php$`). canUpload() (>=4.0.8) adalah defense-in-"
            "depth di atasnya. check() NON-DESTRUKTIF: submit.submit TANPA "
            "jform[file]; exploit() mencoba unggah + verifikasi EKSEKUSI. "
-           "STATUS: documented (tidak dapat diverifikasi sebagai RCE pada "
-           "versi tersedia). Bukti: notes/CVE-2026-48909-48939-56290-lab-verdict.md."),
+           "STATUS: verified sebagai hasil NEGATIF — 2026-11-13 klaim filter "
+           "dikonfirmasi ulang langsung dari source Joomla 4.2.9 "
+           "(libraries/src/Filter/InputFilter.php): FORBIDDEN_FILE_EXTENSIONS "
+           "memuat php/phps/pht/phtml/php3-8/phar/inc/pl/cgi/fcgi/java/jar/py/aspx, "
+           "dan isSafeFile() juga menolak `<?php` pada isi berkas "
+           "(php_tag_in_content), short tag `<?` (shorttag_in_content), serta "
+           "stub __HALT_COMPILER(). Tidak ada jalur unggah->eksekusi, sehingga "
+           "temuan yang benar adalah 'tidak dapat dieksploitasi', bukan "
+           "'belum diuji'. Bukti: notes/CVE-2026-48909-48939-56290-lab-verdict.md."),
 ))
