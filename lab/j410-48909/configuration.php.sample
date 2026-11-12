@@ -1,0 +1,33 @@
+<?php
+class JConfig {
+	public $offline = false;
+	public $sitename = 'MP410';
+	public $dbtype = 'mysqli';
+	public $host = 'megapack-db';
+	public $user = 'j410';
+	public $password = 'labpass';
+	public $db = 'j410';
+	public $dbprefix = 'jos_';
+	public $secret = 'MP410SECRET0123456789';
+	public $log_path = '/tmp/j410site/administrator/logs';
+	public $tmp_path = '/tmp/j410site/tmp';
+	public $live_site = '';
+	public $offline_message = '';
+	public $display_offline_message = 1;
+	public $sitename_pagetitles = 0;
+	public $force_ssl = 0;
+	public $session_handler = 'none';
+	public $MetaDesc = ''; public $MetaKeys = ''; public $MetaTitle = true; public $MetaAuthor = true;
+	public $MetaVersion = false; public $robots = ''; public $cookie_domain = ''; public $cookie_path = '';
+	public $dbencryption = 0; public $dbsslverifyservercert = false; public $dbsslkey = ''; public $dbsslcert = '';
+	public $dbsslca = ''; public $dbsslcipher = ''; public $error_reporting = 'maximum'; public $captcha = '0';
+	public $mailonline = true; public $mailer = 'mail'; public $mailfrom = 'a@b.c'; public $fromname = 'MP';
+	public $sendmail = '/usr/sbin/sendmail'; public $smtpauth = false; public $smtpuser = ''; public $smtppass = '';
+	public $smtphost = 'localhost'; public $smtpsecure = 'none'; public $smtpport = 25; public $caching = 0;
+	public $cache_handler = 'file'; public $cachetime = 15; public $cache_platformprefix = false;
+	public $debug = true; public $sef = false; public $sef_rewrite = false; public $sef_suffix = false;
+	public $unicodeslugs = false; public $feed_limit = 10; public $feed_email = 'none';
+	public $log_path_ok = true; public $tmp_path_ok = true;
+	public $lifetime = 15; public $session_metadata = true; public $shared_session = false;
+	public $gzip = false; public $access = 1;
+}

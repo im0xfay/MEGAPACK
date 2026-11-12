@@ -1,0 +1,31 @@
+# klon referensi / paket vendor — isi besar, bisa di-fetch ulang dari tag/rilis
+*.pyc
+__pycache__/
+src/
+MEGAPACK-report.md
+massrun/*.jsonl
+massrun/*.jsonl.bak
+massrun/*.log
+massrun/*_full.jsonl
+massrun/takeover_hosts.txt
+# dump scan mentah (host massal, sebagian besar SKIP) — jangan di-commit
+massrun/s1500.*
+massrun/sample*.txt
+
+# daftar shell + kredensial hasil exploit — jangan di-commit
+shell.txt
+sh_*.txt
+
+# --- data run live: JANGAN pernah di-commit ---
+# daftar target, hasil scan, shell + kredensial
+joomla*.txt
+hasil-scan*.txt
+res.txt
+shells.txt
+shell.txt
+sh_*.txt
+profil*.json
+massrun/
+*.jsonl
+*.log
+src/

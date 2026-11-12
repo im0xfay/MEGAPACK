@@ -1,0 +1,18 @@
+[project]
+name = "cve-megapack"
+version = "0.1.0"
+description = "MEGAPACK — unified multi-CVE scanner/exploiter (WordPress + Joomla)"
+requires-python = ">=3.9"
+dependencies = ["requests>=2.25"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B"]
+ignore = ["E501", "B008"]
+
+[tool.ruff.lint.per-file-ignores]
+"mp.py" = ["E731", "BLE001"]
+"modules/*.py" = ["BLE001", "E731", "F401"]

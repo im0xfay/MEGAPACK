@@ -1,0 +1,1584 @@
+[
+  {
+    "cve": "CVE-2015-7857",
+    "found": true,
+    "desc": "SQL injection vulnerability in the getListQuery function in administrator/components/com_contenthistory/models/history.php in Joomla! 3.2 before 3.4.5 allows remote attackers to execute arbitrary SQL commands via the list[select] parameter to index.php.",
+    "cwe": "",
+    "cvss": null,
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "n/a",
+        "product": "n/a",
+        "versions": [
+          "n/a"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "sqli",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2015-7858",
+    "found": true,
+    "desc": "SQL injection vulnerability in Joomla! 3.2 before 3.4.4 allows remote attackers to execute arbitrary SQL commands via unspecified vectors, a different vulnerability than CVE-2015-7297.",
+    "cwe": "",
+    "cvss": null,
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "n/a",
+        "product": "n/a",
+        "versions": [
+          "n/a"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "sqli",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2015-8562",
+    "found": true,
+    "desc": "Joomla! 1.5.x, 2.x, and 3.x before 3.4.6 allow remote attackers to conduct PHP object injection attacks and execute arbitrary PHP code via the HTTP User-Agent header, as exploited in the wild in December 2015.",
+    "cwe": "",
+    "cvss": null,
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "n/a",
+        "product": "n/a",
+        "versions": [
+          "n/a"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "object-injection",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2015-8565",
+    "found": true,
+    "desc": "Directory traversal vulnerability in Joomla! 3.2.0 through 3.3.x and 3.4.x before 3.4.6 allows remote attackers to have unspecified impact via unknown vectors.",
+    "cwe": "",
+    "cvss": "7.5 AV:N/AC:L/Au:N/C:P/I:P/A:P",
+    "sev": "HIGH",
+    "affected": [
+      {
+        "vendor": "n/a",
+        "product": "n/a",
+        "versions": [
+          "n/a"
+        ]
+      }
+    ],
+    "cpe": [
+      "cpe:2.3:a:joomla:joomla\\!:3.2.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:joomla:joomla\\!:3.2.1:*:*:*:*:*:*:*",
+      "cpe:2.3:a:joomla:joomla\\!:3.2.2:*:*:*:*:*:*:*",
+      "cpe:2.3:a:joomla:joomla\\!:3.2.3:*:*:*:*:*:*:*",
+      "cpe:2.3:a:joomla:joomla\\!:3.2.4:*:*:*:*:*:*:*"
+    ],
+    "vclass": "lfi",
+    "nvd_status": "Modified"
+  },
+  {
+    "cve": "CVE-2016-8869",
+    "found": true,
+    "desc": "The register method in the UsersModelRegistration class in controllers/user.php in the Users component in Joomla! before 3.6.4 allows remote attackers to gain privileges by leveraging incorrect use of unfiltered data when registering on a site.",
+    "cwe": "",
+    "cvss": null,
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "n/a",
+        "product": "n/a",
+        "versions": [
+          "n/a"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "other",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2016-8870",
+    "found": true,
+    "desc": "The register method in the UsersModelRegistration class in controllers/user.php in the Users component in Joomla! before 3.6.4, when registration has been disabled, allows remote attackers to create user accounts by leveraging failure to check the Allow User Registration configuration setting.",
+    "cwe": "",
+    "cvss": null,
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "n/a",
+        "product": "n/a",
+        "versions": [
+          "n/a"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "other",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2016-9836",
+    "found": true,
+    "desc": "The file scanning mechanism of JFilterInput::isFileSafe() in Joomla! CMS before 3.6.5 does not consider alternative PHP file extensions when checking uploaded files for PHP content, which enables a user to upload and execute files with the `.php6`, `.php7`, `.phtml`, and `.phpt` extensions. Additionally, JHelperMedia::canUpload() did not blacklist these file extensions as uploadable file types.",
+    "cwe": "",
+    "cvss": null,
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "n/a",
+        "product": "n/a",
+        "versions": [
+          "n/a"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "other",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2017-8917",
+    "found": true,
+    "desc": "SQL injection vulnerability in Joomla! 3.7.x before 3.7.1 allows attackers to execute arbitrary SQL commands via unspecified vectors.",
+    "cwe": "",
+    "cvss": null,
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "n/a",
+        "product": "n/a",
+        "versions": [
+          "n/a"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "sqli",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2018-11322",
+    "found": true,
+    "desc": "An issue was discovered in Joomla! Core before 3.8.8. Depending on the server configuration, PHAR files might be handled as executable PHP scripts by the webserver.",
+    "cwe": "",
+    "cvss": null,
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "n/a",
+        "product": "n/a",
+        "versions": [
+          "n/a"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "other",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2019-10945",
+    "found": true,
+    "desc": "An issue was discovered in Joomla! before 3.9.5. The Media Manager component does not properly sanitize the folder parameter, allowing attackers to act outside the media manager root directory.",
+    "cwe": "",
+    "cvss": null,
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "n/a",
+        "product": "n/a",
+        "versions": [
+          "n/a"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "other",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2020-10238",
+    "found": true,
+    "desc": "An issue was discovered in Joomla! before 3.9.16. Various actions in com_templates lack the required ACL checks, leading to various potential attack vectors.",
+    "cwe": "",
+    "cvss": null,
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "n/a",
+        "product": "n/a",
+        "versions": [
+          "n/a"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "other",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2020-24597",
+    "found": false,
+    "desc": "",
+    "cwe": "",
+    "cvss": null,
+    "sev": null,
+    "affected": [],
+    "cpe": [],
+    "vclass": "other",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2021-23132",
+    "found": true,
+    "desc": "An issue was discovered in Joomla! 3.0.0 through 3.9.24. com_media allowed paths that are not intended for image uploads",
+    "cwe": "",
+    "cvss": null,
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "3.0.0-3.9.24"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "other",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2023-23752",
+    "found": true,
+    "desc": "An issue was discovered in Joomla! 4.0.0 through 4.2.7. An improper access check allows unauthorized access to webservice endpoints.",
+    "cwe": "",
+    "cvss": null,
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-4.2.7"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "authbypass",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2025-1128",
+    "found": true,
+    "desc": "The Everest Forms \u2013 Contact Forms, Quiz, Survey, Newsletter & Payment Form Builder for WordPress plugin for WordPress is vulnerable to arbitrary file upload, read, and deletion due to missing file type and path validation in the 'format' method of the EVF_Form_Fields_Upload class in all versions up to, and including, 3.0.9.4. This makes it possible for unauthenticated attackers to upload, read, and delete arbitrary files on the affected site's server which may make remote code execution, sensitive information disclosure, or a site takeover possible.",
+    "cwe": "CWE-434 CWE-434 Unrestricted Upload of File with Dangerous Type",
+    "cvss": "9.8 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "wpeverest",
+        "product": "Everest Forms \u2013 Contact Form, Payment Form, Quiz, Survey & Custom Form Builder",
+        "versions": [
+          "0"
+        ]
+      }
+    ],
+    "cpe": [
+      "cpe:2.3:a:wpeverest:everest_forms:*:*:*:*:*:wordpress:*:*"
+    ],
+    "vclass": "rce",
+    "nvd_status": "Analyzed"
+  },
+  {
+    "cve": "CVE-2025-15030",
+    "found": true,
+    "desc": "The User Profile Builder  WordPress plugin before 3.15.2 does not have a proper password reset process, allowing a few unauthenticated requests to reset the password of any user by knowing their username, such as administrator ones, and therefore gain access to their account",
+    "cwe": "",
+    "cvss": "9.8 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "Unknown",
+        "product": "User Profile Builder",
+        "versions": [
+          "<3.15.2"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "other",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2025-22207",
+    "found": false,
+    "desc": "",
+    "cwe": "",
+    "cvss": null,
+    "sev": null,
+    "affected": [],
+    "cpe": [],
+    "vclass": "other",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2025-22213",
+    "found": true,
+    "desc": "Inadequate checks in the Media Manager allowed users with \"edit\" privileges to change file extension to arbitrary extension, including .php and other potentially executable extensions.",
+    "cwe": "CWE-434 CWE-434 Unrestricted Upload of File with Dangerous Type",
+    "cvss": "cvssV4_0=7.1 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:L/VI:H/VA:L/SC:L/SI:H/SA:L/AU:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-4.4.11",
+          "5.0.0-5.2.4"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "generic",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2025-25227",
+    "found": true,
+    "desc": "Insufficient state checks lead to a vector that allows to bypass 2FA checks.",
+    "cwe": "CWE-287 CWE-287 Improper Authentication",
+    "cvss": null,
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-4.4.12",
+          "5.0.0-5.2.5"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "authbypass",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2025-2563",
+    "found": true,
+    "desc": "The User Registration & Membership  WordPress plugin before 4.1.2 does not prevent users to set their account role when the Membership Addon is enabled, leading to a privilege escalation issue and allowing unauthenticated users to gain admin privileges",
+    "cwe": "",
+    "cvss": "8.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "HIGH",
+    "affected": [
+      {
+        "vendor": "Unknown",
+        "product": "User Registration & Membership",
+        "versions": [
+          "<4.1.2"
+        ]
+      }
+    ],
+    "cpe": [
+      "cpe:2.3:a:wpeverest:user_registration_\\&_membership:*:*:*:*:free:wordpress:*:*",
+      "cpe:2.3:a:wpeverest:user_registration_\\&_membership:*:*:*:*:pro:wordpress:*:*"
+    ],
+    "vclass": "privesc",
+    "nvd_status": "Analyzed"
+  },
+  {
+    "cve": "CVE-2025-2594",
+    "found": true,
+    "desc": "The User Registration & Membership WordPress plugin before 4.1.3 does not properly validate data in an AJAX action when the Membership Addon is enabled, allowing attackers to authenticate as any user, including administrators, by simply using the target account's user ID.",
+    "cwe": "",
+    "cvss": null,
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Unknown",
+        "product": "User Registration & Membership",
+        "versions": [
+          "<4.1.3"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "other",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2025-3439",
+    "found": true,
+    "desc": "The Everest Forms \u2013 Contact Form, Quiz, Survey, Newsletter & Payment Form Builder for WordPress plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 3.1.1 via deserialization of untrusted input from the 'field_value' parameter. This makes it possible for unauthenticated attackers to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.",
+    "cwe": "CWE-502 CWE-502 Deserialization of Untrusted Data",
+    "cvss": "9.8 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "wpeverest",
+        "product": "Everest Forms \u2013 Contact Form, Payment Form, Quiz, Survey & Custom Form Builder",
+        "versions": [
+          "0"
+        ]
+      }
+    ],
+    "cpe": [
+      "cpe:2.3:a:wpeverest:everest_forms:*:*:*:*:*:wordpress:*:*"
+    ],
+    "vclass": "object-injection",
+    "nvd_status": "Analyzed"
+  },
+  {
+    "cve": "CVE-2026-102427",
+    "found": true,
+    "desc": "Joomla Extension - ordasoft.com - Unauthenticated Remote Code Execution in OrdaSoft Joomla CCK < 8.3.16 - site/uploader.php is reached through the component\u2019s normal frontend routing (task=getContent), a task with no authentication or ACL check anywhere in the dispatch chain. The handler validates the uploaded file\u2019s content with a real magic-byte MIME check, but the extension allow-list that would otherwise restrict the saved file\u2019s extension was present in the source and commented out. The saved file\u2019s extension was taken directly from the attacker-supplied filename with no validation, and the file was written to a path directly under the Joomla web root that is executed by the PHP handler. An image/PHP polyglot, a file whose header bytes satisfy the MIME check with PHP source appended after, passed the content check while carrying a .php extension of the attacker\u2019s choosing.",
+    "cwe": "CWE-434 CWE-434 Unrestricted Upload of File with Dangerous Type",
+    "cvss": "cvssV4_0=10 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/AU:Y",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "ordasoft.com",
+        "product": "OrdaSoft Joomla CCK",
+        "versions": [
+          "1.0.0-8.3.15"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "rce",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-102785",
+    "found": true,
+    "desc": "Joomla Extension - yootheme.com - Unauthenticated remote code execution in YOOtheme Pro 5.0.0-5.0.52 - YOOtheme Pro\u2019s publicly accessible image transformation handler incompletely binds normalized image operations and the output destination to its request signature. An unauthenticated remote attacker can reuse a signature disclosed in a legitimate public image URL, inject additional image operations, traverse out of the intended cache directory, and write an attacker-controlled PNG/PHP polyglot to an executable public media directory.",
+    "cwe": "CWE-434 CWE-434 Unrestricted Upload of File with Dangerous Type",
+    "cvss": "cvssV4_0=10 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/AU:Y",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "yootheme.com",
+        "product": "YOOtheme Pro extension for Joomla",
+        "versions": [
+          "5.0.0-5.0.52"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "rce",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-11961",
+    "found": true,
+    "desc": "The User Registration & Membership  WordPress plugin before 5.2.3 does not validate that the membership tier submitted during public registration is one of the tiers allowed by the registration form before assigning that tier's associated user role, allowing unauthenticated users to register into an arbitrary published membership tier and obtain its role \u2014 up to administrator when such a tier exists.",
+    "cwe": "",
+    "cvss": "8.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "HIGH",
+    "affected": [
+      {
+        "vendor": "Unknown",
+        "product": "User Registration & Membership",
+        "versions": [
+          "<5.2.3"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "generic",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-12251",
+    "found": true,
+    "desc": "The Ultimate Member  WordPress plugin before 2.12.1 does not filter administrator-level capabilities from the roles it makes selectable on its registration forms, and its post-registration safeguard against elevated accounts is disabled by default, allowing unauthenticated users to register with a site-defined role that carries administrator capabilities and gain administrative access, when such a role exists and a role-selection field is present on a published registration form.",
+    "cwe": "",
+    "cvss": "8.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "HIGH",
+    "affected": [
+      {
+        "vendor": "Unknown",
+        "product": "Ultimate Member",
+        "versions": [
+          "<2.12.1"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "other",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-14894",
+    "found": true,
+    "desc": "The Super Forms \u2013 Drag & Drop Form Builder plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 6.3.313 via the submit_form function. This is due to missing file type validation and the absence of any capability check on the submit_form nopriv AJAX handler, whose only barrier is a session nonce freely obtainable by unauthenticated visitors via a separate nopriv endpoint. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. The nonce requirement is trivially bypassed because the super_create_nonce nopriv AJAX action allows any unauthenticated visitor to mint a valid sf_nonce and session cookie in a single prior request, reducing exploitation to two unauthenticated HTTP requests.",
+    "cwe": "CWE-434 CWE-434 Unrestricted Upload of File with Dangerous Type",
+    "cvss": "9.8 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "WebRehab",
+        "product": "Super Forms \u2013 Drag & Drop Form Builder",
+        "versions": [
+          "0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "rce",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-1492",
+    "found": true,
+    "desc": "The User Registration & Membership \u2013 Custom Registration Form Builder, Custom Login Form, User Profile, Content Restriction & Membership Plugin plugin for WordPress is vulnerable to improper privilege management in all versions up to, and including, 5.1.2. This is due to the plugin accepting a user-supplied role during membership registration without properly enforcing a server-side allowlist. This makes it possible for unauthenticated attackers to create administrator accounts by supplying a role value during membership registration.",
+    "cwe": "CWE-269 CWE-269 Improper Privilege Management",
+    "cvss": "cvssV3_1=9.8 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "wpeverest",
+        "product": "User Registration & Membership \u2013 Free & Paid Memberships, Subscriptions, Content Restriction, User Profile, Custom User Registration & Login Builder",
+        "versions": [
+          "0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "other",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-15368",
+    "found": true,
+    "desc": "The User Profile Builder  WordPress plugin before 3.16.4 does not correctly bind the automatic login performed after user registration to the newly created account, allowing unauthenticated attackers to obtain an authenticated session for an arbitrary existing user, including administrators, on sites using a supported but non-default configuration.",
+    "cwe": "",
+    "cvss": "8.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "HIGH",
+    "affected": [
+      {
+        "vendor": "Unknown",
+        "product": "User Profile Builder",
+        "versions": [
+          "<3.16.4"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "generic",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-15826",
+    "found": true,
+    "desc": "The User Profile Builder plugin for WordPress is vulnerable to Authentication Bypass via Type Confusion in versions up to, and including, 3.16.4. This is due to the wppb_log_in_user() function calling absint() on the return value of wp_insert_user() before performing an is_wp_error() check \u2014 when a registration is submitted with a 61\u201370 character username, WordPress core rejects it with a WP_Error object, but absint() coerces that object to the integer 1 before the error check can short-circuit execution, causing the plugin to bind and return a transient-backed autologin nonce tied to user ID 1. This makes it possible for unauthenticated attackers to log in as the site's Administrator account (user ID 1), resulting in full administrative takeover of the site.",
+    "cwe": "CWE-704 CWE-704 Incorrect Type Conversion or Cast",
+    "cvss": "9.8 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "cozmoslabs",
+        "product": "User Profile Builder \u2013 Beautiful User Registration Forms, User Profiles & User Role Editor",
+        "versions": [
+          "0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "rce",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-1779",
+    "found": true,
+    "desc": "The User Registration & Membership plugin for WordPress is vulnerable to authentication bypass in versions up to, and including, 5.1.2. This is due to incorrect authentication in the 'register_member' function. This makes it possible for unauthenticated attackers to log in a newly registered user on the site who has the 'urm_user_just_created' user meta set.",
+    "cwe": "CWE-288 CWE-288 Authentication Bypass Using an Alternate Path or Channel",
+    "cvss": "cvssV3_1=8.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "wpeverest",
+        "product": "User Registration & Membership \u2013 Free & Paid Memberships, Subscriptions, Content Restriction, User Profile, Custom User Registration & Login Builder",
+        "versions": [
+          "0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "authbypass",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-18937",
+    "found": true,
+    "desc": "The Broken Link Checker WordPress plugin before 2.4.12 does not limit which query variables it accepts from user input on sites using plain permalinks, allowing unauthenticated users to overwrite arbitrary PHP global variables, and to execute arbitrary code on the server when a classic (non-block)  is active.",
+    "cwe": "",
+    "cvss": "9.0 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "Unknown",
+        "product": "Broken Link Checker",
+        "versions": [
+          "<2.4.12"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "param-injection",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-19423",
+    "found": true,
+    "desc": "The Ultimate Member  WordPress plugin before 2.13.0 does not validate a submitted role selection when it cannot resolve the set of roles a profile form permits, and screens the value against the site's registered role names rather than against the form's own allow-list, allowing unauthenticated users who register through the Ultimate Member  WordPress plugin before 2.13.0's own form to grant themselves arbitrary capabilities and reach administrator-equivalent access.",
+    "cwe": "",
+    "cvss": "8.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "HIGH",
+    "affected": [
+      {
+        "vendor": "Unknown",
+        "product": "Ultimate Member",
+        "versions": [
+          "<2.13.0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "generic",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-19598",
+    "found": true,
+    "desc": "The Pods \u2013 Custom Content Types and Fields plugin for WordPress is vulnerable to Privilege Escalation via Authorization Bypass in all versions up to, and including, 3.3.9. The vulnerability exists because the pods_admin AJAX router funnels every access check \u2014 including the method allowlist, nonce verification, login enforcement, and capability gate \u2014 through pods_error(), which under the JSON meta-box-loader compatibility path only writes failures to the PHP error log and returns false instead of terminating the request, rendering all guards ineffective.  This makes it possible for unauthenticated attackers to escalate their privileges to Administrator or overwrite the password of any user account, including the site owner's, enabling complete site takeover, or perform another administrator action.",
+    "cwe": "CWE-863 CWE-863 Incorrect Authorization",
+    "cvss": "9.8 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "sc0ttkclark",
+        "product": "Pods \u2013 Custom Content Types and Fields",
+        "versions": [
+          "2.8",
+          "2.9",
+          "3.0",
+          "3.1",
+          "3.2",
+          "3.3"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "rce",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-19632",
+    "found": true,
+    "desc": "The TranslatePress \u2013 Translate Multilingual sites with AI Translation plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 3.3.1 via the 'trp_get_translations_regular' AJAX action. This makes it possible for unauthenticated attackers to extract the raw administrator password-reset URL \u2014 including the plaintext reset key and login parameters stored in the translation dictionary table \u2014 enabling full administrator account takeover. This vulnerability is only exploitable when automatic string saving is enabled (the default setting) and the target administrator's profile locale is set to a published secondary language, as these conditions cause the password-reset URL to be persisted as a translatable string in the secondary-language dictionary table.",
+    "cwe": "CWE-640 CWE-640 Weak Password Recovery Mechanism for Forgotten Password",
+    "cvss": "9.8 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "cozmoslabs",
+        "product": "TranslatePress \u2013 Translate Multilingual sites with AI Translation",
+        "versions": [
+          "0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "infodisc",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-21628",
+    "found": true,
+    "desc": "A improperly secured file management feature allows uploads of dangerous data types for unauthenticated users, leading to remote code execution.",
+    "cwe": "CWE-434 CWE-434 Unrestricted Upload of File with Dangerous Type",
+    "cvss": "cvssV4_0=10 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/AU:Y",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "astroidframe.work",
+        "product": "Astroid Template Framework",
+        "versions": [
+          "2.0.0-3.3.10"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "rce",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-21630",
+    "found": true,
+    "desc": "Improperly built order clauses lead to a SQL injection vulnerability in the articles webservice endpoint.",
+    "cwe": "CWE-89 CWE-89 Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+    "cvss": "cvssV4_0=6.9 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-5.4.3",
+          "6.0.0-6.0.3"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "sqli",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-23899",
+    "found": true,
+    "desc": "An improper access check allows unauthorized access to webservice endpoints.",
+    "cwe": "CWE-284 CWE-284 Improper Access Control",
+    "cvss": "cvssV4_0=8.6 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-5.4.3",
+          "6.0.0-6.0.3"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "authbypass",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-32475",
+    "found": true,
+    "desc": "Unrestricted Upload of File with Dangerous Type vulnerability in Elementor Elementor Pro allows Using Malicious Files.\n\nThis issue affects Elementor Pro: from n/a through 4.2.1.",
+    "cwe": "CWE-434 CWE-434 Unrestricted Upload of File with Dangerous Type",
+    "cvss": "cvssV3_1=9 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Elementor",
+        "product": "Elementor Pro",
+        "versions": [
+          "n/a"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "other",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-32488",
+    "found": true,
+    "desc": "Incorrect Privilege Assignment vulnerability in wpeverest User Registration user-registration allows Privilege Escalation.This issue affects User Registration: from n/a through <= 4.4.9.",
+    "cwe": "CWE-266 Incorrect Privilege Assignment",
+    "cvss": "cvssV3_1=8.1 CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "wpeverest",
+        "product": "User Registration",
+        "versions": [
+          "n/a"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "privesc",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-3296",
+    "found": true,
+    "desc": "The Everest Forms plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 3.4.3 via deserialization of untrusted input from form entry metadata. This is due to the html-admin-page-entries-view.php file calling PHP's native unserialize() on stored entry meta values without passing the allowed_classes parameter. This makes it possible for unauthenticated attackers to inject a serialized PHP object payload through any public Everest Forms form field. The payload survives sanitize_text_field() sanitization (serialization control characters are not stripped) and is stored in the wp_evf_entrymeta database table. When an administrator views entries or views an individual entry, the unsafe unserialize() call processes the stored data without class restrictions.",
+    "cwe": "CWE-502 CWE-502 Deserialization of Untrusted Data",
+    "cvss": "9.8 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "wpeverest",
+        "product": "Everest Forms \u2013 Contact Form, Payment Form, Quiz, Survey & Custom Form Builder",
+        "versions": [
+          "0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "object-injection",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-35221",
+    "found": true,
+    "desc": "Improperly built filter clauses lead to a SQL injection vulnerability in the search query for com_finder.",
+    "cwe": "CWE-89 CWE-89 Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+    "cvss": "cvssV4_0=6.9 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "6.0.0-6.1.0",
+          "5.4.0-5.4.5"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "sqli",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-35222",
+    "found": true,
+    "desc": "Improperly validated order clauses lead to a SQL injection vulnerability in com_tags.",
+    "cwe": "CWE-89 CWE-89 Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+    "cvss": "cvssV4_0=6.9 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "6.0.0-6.1.0",
+          "4.0.0-5.4.5"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "sqli",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-35223",
+    "found": true,
+    "desc": "An improper access check allows unauthorized access to com_config webservice endpoints.",
+    "cwe": "CWE-284 CWE-284 Improper Access Control",
+    "cvss": "cvssV4_0=8.6 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-5.4.5",
+          "6.0.0-6.1.0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "authbypass",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-40383",
+    "found": true,
+    "desc": "An improper validation of user-supplied input leads to a local file inclusion vulnerability.",
+    "cwe": "CWE-22 CWE-22 Improper Limitation of a Pathname to a Restricted Directory",
+    "cvss": "cvssV4_0=7.5 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "3.2.1-5.4.5",
+          "6.0.0-6.1.0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "lfi",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-40384",
+    "found": true,
+    "desc": "An improper validation of the search parameter of the com_media files API endpoint leads to a path traversal vulnerability.",
+    "cwe": "CWE-22 CWE-22 Improper Limitation of a Pathname to a Restricted Directory",
+    "cvss": "cvssV4_0=5.9 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-5.4.5",
+          "6.0.0-6.1.0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "lfi",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-48896",
+    "found": true,
+    "desc": "Insufficient state checks lead to a vector that allows to bypass 2FA checks.",
+    "cwe": "CWE-287 CWE-287 Improper Authentication",
+    "cvss": "cvssV4_0=8.2 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-5.4.5",
+          "6.0.0-6.1.0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "authbypass",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-48898",
+    "found": true,
+    "desc": "An improper access check allows privilege escalation through the com_users batch task.",
+    "cwe": "CWE-284 CWE-284 Improper Access Control",
+    "cvss": "9.8 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-5.4.5",
+          "6.0.0-6.1.0"
+        ]
+      }
+    ],
+    "cpe": [
+      "cpe:2.3:a:joomla:joomla\\!:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:joomla:joomla\\!:*:*:*:*:*:*:*:*"
+    ],
+    "vclass": "privesc",
+    "nvd_status": "Analyzed"
+  },
+  {
+    "cve": "CVE-2026-48899",
+    "found": true,
+    "desc": "An improper access check allows privilege escalation through the com_users batch task.",
+    "cwe": "CWE-284 CWE-284 Improper Access Control",
+    "cvss": "cvssV4_0=5.3 CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-5.4.5",
+          "6.0.0-6.1.0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "privesc",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-48904",
+    "found": true,
+    "desc": "An improper access check allows privelege escalation through the com_users group editing webservice endpoint.",
+    "cwe": "CWE-284 CWE-284 Improper Access Control",
+    "cvss": "cvssV4_0=8.2 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-5.4.5",
+          "6.0.0-6.1.0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "authbypass",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-48908",
+    "found": true,
+    "desc": "A vulnerability in SP Page Builder for Joomla allows unauthenticated users to upload arbitrary files, ultimately resulting in the upload and execution of PHP code.",
+    "cwe": "CWE-434 CWE-434: Unrestricted Upload of File with Dangerous Type",
+    "cvss": "9.8 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "joomshaper.net",
+        "product": "SP Page Builder extension for Joomla",
+        "versions": [
+          "1.0.0-6.6.1"
+        ]
+      }
+    ],
+    "cpe": [
+      "cpe:2.3:a:ollyo:sp_page_builder:*:*:*:*:-:joomla\\!:*:*"
+    ],
+    "vclass": "upload",
+    "nvd_status": "Analyzed"
+  },
+  {
+    "cve": "CVE-2026-48939",
+    "found": true,
+    "desc": "A vulnerability in the iCagenda extension for Joomla allows the upload of arbitrary files in the file attachment feature, ultimately resulting in PHP code upload and execution.",
+    "cwe": "CWE-434 CWE-434: Unrestricted Upload of File with Dangerous Type",
+    "cvss": "9.8 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "icagenda.com",
+        "product": "iCagenda extension for Joomla",
+        "versions": [
+          "3.2.1-4.0.7"
+        ]
+      }
+    ],
+    "cpe": [
+      "cpe:2.3:a:joomlic:icagenda:*:*:*:*:-:joomla\\!:*:*",
+      "cpe:2.3:a:joomlic:icagenda:*:*:*:*:-:joomla\\!:*:*"
+    ],
+    "vclass": "upload",
+    "nvd_status": "Analyzed"
+  },
+  {
+    "cve": "CVE-2026-5118",
+    "found": true,
+    "desc": "The Divi Form Builder plugin for WordPress is vulnerable to privilege escalation in versions up to, and including, 5.1.2. This is due to the plugin accepting a user-controlled 'role' parameter from POST data during user registration without validating it against the form's configured default_user_role setting. This makes it possible for unauthenticated attackers to create administrator accounts by tampering with the role parameter during registration.",
+    "cwe": "CWE-269 CWE-269 Improper Privilege Management",
+    "cvss": "9.8 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "Divi Engine",
+        "product": "Divi Form Builder",
+        "versions": [
+          "0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "privesc",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-5524",
+    "found": true,
+    "desc": "The Divi Form Builder plugin for WordPress is vulnerable to Arbitrary File Upload leading to Remote Code Execution in all versions up to and including 5.1.8. This is due to insufficient file extension validation in the do_image_upload() function where user-supplied input from the acceptFileTypes POST parameter is directly interpolated into a regular expression used to validate uploaded files. Attackers can specify PHP-executable extensions such as .phtml, .phar, .php5, or .php7 to bypass the plugin's .htaccess protection which only blocks .php files specifically. Additionally, on Nginx-based servers, the .htaccess protection is completely ineffective as Nginx does not process .htaccess files. This makes it possible for unauthenticated attackers (who can obtain a nonce from any public page containing a form) to upload executable PHP files to the publicly accessible /wp-content/uploads/de_fb_uploads/ directory and achieve Remote Code Execution by accessing the uploaded file via HTTP. The vulnerability was partially patched in version 5.1.3.",
+    "cwe": "CWE-434 CWE-434 Unrestricted Upload of File with Dangerous Type",
+    "cvss": "9.8 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "Divi Engine",
+        "product": "Divi Form Builder",
+        "versions": [
+          "0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "rce",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-56290",
+    "found": true,
+    "desc": "Joomla Extension - joomlack.fr - Unauthenticated file upload in Page Builder CK extension < 3.6.0 - The Joomla extension Page Builder CK is vulnerable to an unauthenticated arbitrary file upload that allows uploading executable files and leads to full RCE.",
+    "cwe": "CWE-434 CWE-434: Unrestricted Upload of File with Dangerous Type",
+    "cvss": "cvssV4_0=10 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/AU:Y/U:Red",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "joomlack.fr",
+        "product": "JoomlaCK.fr Page Builder CK extension for Joomla",
+        "versions": [
+          "1.0-3.6.0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "rce",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-56291",
+    "found": true,
+    "desc": "Joomla Extension - balbooa.com - Unauthenticated file upload in Balbooa Forms extension < 2.4.1 - The Joomla extension Balbooa Forms is vulnerable to an unauthenticated arbitrary file upload that allows uploading executable files and leads to full RCE.",
+    "cwe": "CWE-434 CWE-434: Unrestricted Upload of File with Dangerous Type",
+    "cvss": "9.8 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "balbooa.com",
+        "product": "balbooa.com Balbooa Forms extension for Joomla",
+        "versions": [
+          "1.0-2.4.0"
+        ]
+      }
+    ],
+    "cpe": [
+      "cpe:2.3:a:balbooa:forms:*:*:*:*:*:joomla\\!:*:*"
+    ],
+    "vclass": "rce",
+    "nvd_status": "Analyzed"
+  },
+  {
+    "cve": "CVE-2026-62103",
+    "found": true,
+    "desc": "Unauthenticated PHP Object Injection in Everest Forms <= 3.6.0 versions.",
+    "cwe": "CWE-502 CWE-502 Deserialization of Untrusted Data",
+    "cvss": "9.8 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "wpeverest",
+        "product": "Everest Forms",
+        "versions": [
+          "n/a"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "object-injection",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-65766",
+    "found": true,
+    "desc": "Joomla Extension - joomshaper.com - Unauthenticated SQL injection  in SP Page Builder < 6.7.1 - Improper validation of order parameters in the Dynamic Content endpoint leads to an SQL injection vector.",
+    "cwe": "CWE-89 CWE-89 Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+    "cvss": "cvssV4_0=9.2 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "joomshaper.com",
+        "product": "SP Page Builder extension for Joomla",
+        "versions": [
+          "1.0.0-6.7.0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "sqli",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-65876",
+    "found": true,
+    "desc": "Joomla Extension - joomshaper.com - Unauthenticated SQL injection  in SP Page Builder < 6.8.0 - Improper validation of catid parameters in the loadMoreArticles endpoint leads to an SQL injection vector.",
+    "cwe": "CWE-89 CWE-89 Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+    "cvss": "cvssV4_0=9.2 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "joomshaper.com",
+        "product": "SP Page Builder extension for Joomla",
+        "versions": [
+          "1.0.0-6.7.1"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "sqli",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-67285",
+    "found": true,
+    "desc": "Joomla Extension - joomshaper.com - Unauthenticated arbitrary local PHP file inclusion in SP Page Builder < 6.8.0 - An unauthenticated attacker can perform includes to arbitrary PHP files that are accessible by the system.",
+    "cwe": "CWE-22 CWE-22 Improper Limitation of a Pathname to a Restricted Directory",
+    "cvss": "cvssV4_0=9.2 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "joomshaper.com",
+        "product": "SP Page Builder extension for Joomla",
+        "versions": [
+          "1.0.0-6.7.1"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "lfi",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-67365",
+    "found": true,
+    "desc": "Joomla Extension - icagenda.com - Unauthenticated SQL injection in iCagenda < 4.0.0-4.0.11 - Unauthenticated SQL injection in mod_icagenda_calendar (iCagenda), reachable via com_ajax with no session, token or account.",
+    "cwe": "CWE-89 CWE-89 Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+    "cvss": "cvssV4_0=9.2 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:L/VA:L/SC:H/SI:H/SA:H",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "icagenda.com",
+        "product": "iCagenda extension for Joomla",
+        "versions": [
+          "4.0.0-4.0.11"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "sqli",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-71574",
+    "found": true,
+    "desc": "Joomla! Core - [20260803] - Inconsistent ACL checks for mutating webservice endpoints in Joomla 4.0.0-5.4.7, 6.0.0-6.1.2 - An improper access check allows unauthorized users to perform mutation actions in webservice endpoints, where the same mutation was restricted in the backend UI.",
+    "cwe": "CWE-284 CWE-284 Improper Access Control",
+    "cvss": "cvssV4_0=8.5 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-5.4.6",
+          "6.0.0-6.1.2"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "authbypass",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-73337",
+    "found": true,
+    "desc": "Joomla! Core - [20260807] - MFA Authentication Bypass in Joomla 4.0.0-5.4.7 and 6.0.0-6.1.2 - Insufficient state checks lead to a vector that allows to bypass 2FA checks.",
+    "cwe": "CWE-287 CWE-287 Improper Authentication",
+    "cvss": "cvssV4_0=8.2 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-5.4.6",
+          "6.0.0-6.1.2"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "authbypass",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-73371",
+    "found": true,
+    "desc": "Joomla! Core - [20260808] - Improper ACL checks for batch copy actions in Joomla 4.0.0-5.4.7, 6.0.0-6.1.2 - An improper access check allows unauthorized users to perform copy batch operations on uneditable items.",
+    "cwe": "CWE-284 CWE-284 Improper Access Control",
+    "cvss": "cvssV4_0=5.1 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-5.4.6",
+          "6.0.0-6.1.2"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "authbypass",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-73372",
+    "found": true,
+    "desc": "Joomla! Core - [20260809] - Improper ACL checks when injection schema.org contact data in Joomla 5.1.0-5.4.7 and 6.0.0-6.1.2 - An improper access check injects contact information for unaccessible contact items into schema.org snippets.",
+    "cwe": "CWE-284 CWE-284 Improper Access Control",
+    "cvss": "cvssV4_0=5.1 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "5.1.0-5.4.6",
+          "6.0.0-6.1.2"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "authbypass",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-73373",
+    "found": true,
+    "desc": "Joomla! Core - [20260810] - Unrestricted uploads of SHTML files in Joomla 1.0.0-5.4.7, 6.0.0-6.1.2 - The default list of dangerous files did not include SHTML files. On servers that executed these files, that could lead to code execution.",
+    "cwe": "CWE-434 CWE-434 Unrestricted Upload of File with Dangerous Type",
+    "cvss": "cvssV4_0=8.9 CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "1.0.0-5.4.6",
+          "6.0.0-6.1.2"
+        ]
+      },
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! Framework Filesystem package",
+        "versions": [
+          "1.0.0-3.3.0",
+          "4.0.0-4.2.0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "rce",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-74251",
+    "found": true,
+    "desc": "Joomla Extension - phoca.cz -  Unauthenticated SQL injection via attribute filter in Phoca Cart 5.0.0-6.1.6 - The a[] (attribute) and s[] (specification) GET array parameters on Phoca Cart's public shop items page are concatenated raw into SQL WHERE clauses without parameterization or escaping. An unauthenticated attacker can inject arbitrary SQL through these parameters, enabling full database extraction via time-based blind techniques.",
+    "cwe": "CWE-89 CWE-89 Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+    "cvss": "cvssV4_0=9.3 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "phoca.cz",
+        "product": "Phoca Cart extension for Joomla",
+        "versions": [
+          "5.0.0-6.1.6"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "sqli",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-74253",
+    "found": true,
+    "desc": "Joomla Extension - regularlabs.com - Unauthenticated RCE through unverified reflected user input in Sourcerer < 16.0.0 - Regular Labs Sourcerer before 16.0.0 processes {source} blocks found in Joomla\u2019s final rendered HTML without reliably determining where that code originated.",
+    "cwe": "CWE-94 CWE-94: Improper Control of Generation of Code",
+    "cvss": "cvssV4_0=10 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "regularlabs.com",
+        "product": "Sourcerer extension for Joomla",
+        "versions": [
+          "1.0.0-15.0.0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "rce",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-76570",
+    "found": true,
+    "desc": "Joomla Extension - joomcode.com - Unauthenticated SQL injection in read and write queries in JCTables  1.21.1 - The front-end CRUD API controller performs no Joomla token validation and no authentication check on any task. Table names, column names, and values are taken directly from request parameters and concatenated into SQL queries, allowing SQLi for reading and writing queries.",
+    "cwe": "CWE-89 CWE-89: Improper Neutralization of Special Elements used in an SQL Command",
+    "cvss": "cvssV4_0=10 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/AU:Y",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "joomcode.com",
+        "product": "JCTables extension for Joomla",
+        "versions": [
+          "1.0.0-1.20.0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "sqli",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-82222",
+    "found": true,
+    "desc": "Deserialization of Untrusted Data vulnerability in Liquid Web / StellarWP GiveWP allows Object Injection.\n\nThis issue affects GiveWP: from n/a through 4.16.7.1.",
+    "cwe": "CWE-502 CWE-502 Deserialization of Untrusted Data",
+    "cvss": "10.0 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "Liquid Web / StellarWP",
+        "product": "GiveWP",
+        "versions": [
+          "n/a"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "object-injection",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-90907",
+    "found": true,
+    "desc": "Joomla! Core - [20260902] - Core - Unauthorized user account creation via profile.save controller in Joomla 1.5.0-5.4.8, 6.0.0-6.1.3 - The profile.save controller did not check the login state of a user, allowing the creation of guest-level users on sites without active user registration.",
+    "cwe": "CWE-639 CWE-639: Authorization Bypass Through User-Controlled Key",
+    "cvss": "cvssV4_0=6.9 CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "1.5.0-5.4.8",
+          "6.0.0-6.1.3"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "other",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-90913",
+    "found": true,
+    "desc": "Joomla! Core - [20260903] - Core - Improper ACL checks for access level webservice endpoints in Joomla 4.0.0-5.4.8, 6.0.0-6.1.3 - An improper access check allows unauthorized users to perform mutation actions in access level endpoints.",
+    "cwe": "CWE-284 CWE-284 Improper Access Control",
+    "cvss": "cvssV4_0=7 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-5.4.8",
+          "6.0.0-6.1.3"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "authbypass",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-92226",
+    "found": true,
+    "desc": "Joomla! Core - [20260913] - Core - Improper ACL checks for varous webservice edit tasks in Joomla 4.0.0-5.4.8, 6.0.0-6.1.3 - An improper access check allows unauthorized users to perform edit actions on otherwise uneditable items.",
+    "cwe": "CWE-284 CWE-284 Improper Access Control",
+    "cvss": "cvssV4_0=7 CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:H/VA:L/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-5.4.8",
+          "6.0.0-6.1.3"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "authbypass",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-92227",
+    "found": true,
+    "desc": "Joomla! Core - [20260914] - Core - MFA Authentication Bypass through rememberme cookies in Joomla 4.0.0-5.4.8, 6.0.0-6.1.3 - The premature issuance of an rememberme cookie leads to a MFA bypass vulnerability.",
+    "cwe": "CWE-287 CWE-287 Improper Authentication",
+    "cvss": "cvssV4_0=8.2 CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+    "sev": null,
+    "affected": [
+      {
+        "vendor": "Joomla! Project",
+        "product": "Joomla! CMS",
+        "versions": [
+          "4.0.0-5.4.8",
+          "6.0.0-6.1.3"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "authbypass",
+    "nvd_status": null
+  },
+  {
+    "cve": "CVE-2026-94169",
+    "found": true,
+    "desc": "Improper Control of Generation of Code ('Code Injection') vulnerability in Theme-one The Grid the-grid allows Command Injection.This issue affects The Grid: from n/a through 2.8.1.",
+    "cwe": "CWE-94 Improper Control of Generation of Code ('Code Injection')",
+    "cvss": "10.0 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+    "sev": "CRITICAL",
+    "affected": [
+      {
+        "vendor": "Theme-one",
+        "product": "The Grid",
+        "versions": [
+          "0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "other",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-96451",
+    "found": true,
+    "desc": "Authorization Bypass Through User-Controlled Key vulnerability in Ultimate Member Ultimate Member ultimate-member allows Privilege Escalation.This issue affects Ultimate Member: from n/a through 2.13.1.",
+    "cwe": "CWE-639 Authorization Bypass Through User-Controlled Key",
+    "cvss": "8.8 CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "sev": "HIGH",
+    "affected": [
+      {
+        "vendor": "Ultimate Member",
+        "product": "Ultimate Member",
+        "versions": [
+          "0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "privesc",
+    "nvd_status": "Deferred"
+  },
+  {
+    "cve": "CVE-2026-96562",
+    "found": true,
+    "desc": "The The Broken Link Checker plugin for WordPress is vulnerable to arbitrary shortcode execution in all versions up to, and including, 2.4.14.1. This is due to the software allowing users to execute an action that does not properly validate a value before running do_shortcode. This makes it possible for unauthenticated attackers to execute arbitrary shortcodes. Exploitation requires that a submitted comment containing the shortcode payload in an href or src attribute is approved through the site's normal comment moderation workflow; once approved, the shortcode is executed automatically via WP-Cron without any further attacker interaction.",
+    "cwe": "CWE-94 CWE-94 Improper Control of Generation of Code ('Code Injection')",
+    "cvss": "6.5 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+    "sev": "MEDIUM",
+    "affected": [
+      {
+        "vendor": "wpmudev",
+        "product": "Broken Link Checker",
+        "versions": [
+          "0"
+        ]
+      }
+    ],
+    "cpe": [],
+    "vclass": "rce",
+    "nvd_status": "Deferred"
+  }
+]
